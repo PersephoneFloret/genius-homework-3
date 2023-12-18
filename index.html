@@ -69,7 +69,9 @@
         <div class="container hero-container">
           <p class="cosmetology-clinic">Косметологічна клініка</p>
           <h1 class="hero-title" lang="eng">Beaty Zone</h1>
-          <button class="button" type="button">Замовити дзвінок</button>
+          <button class="button modal-btn-open" type="button">
+            Замовити дзвінок
+          </button>
           <p class="button-description">
             Запишись та отримай безкоштовну консультацію нашого косметолога
           </p>
@@ -177,22 +179,25 @@
             </button>
             <ul class="list procedure-cards">
               <li>
-                <article>
-                  <img src="./images/face-1.jpg" alt="Маска для обличчя" />
+                <article class="procedure-img">
+                  <!--<img src="./images/face-1.jpg" alt="Маска для обличчя" />-->
+                  <p class="procedure-cards-texst">Маски для обличчя</p>
                 </article>
               </li>
               <li>
-                <article>
-                  <img src="./images/face-2.jpg" alt="Ін'єкції" />
+                <article class="procedure-img">
+                  <!--<img src="./images/face-2.jpg" alt="Ін'єкції" />-->
+                  <p class="procedure-cards-texst">Ін'єкції для обличчя</p>
                 </article>
               </li>
               <li>
-                <article>
-                  <img src="./images/face-3.jpg" alt="Очищення обличчя" />
+                <article class="procedure-img">
+                  <!--<img src="./images/face-3.jpg" alt="Очищення обличчя" />-->
+                  <p class="procedure-cards-texst">Очищення обличчя</p>
                 </article>
               </li>
             </ul>
-            <button class="carousel-button" type="button">
+            <button class="carousel-button next" type="button">
               <svg class="carousel-arrow" width="20" height="20">
                 <use href="./images/svg-icons.svg#icon-arrow-left2"></use>
               </svg>
@@ -308,12 +313,63 @@
             >Політика конфіденційності</a
           >
           <p class="address-copyright">&copy; 2022 Дані захищені</p>
-          <img
-            src="./images/ footer-pic.jpg"
-            alt="Зображення косметологічних продуктів"
-          />
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">Close</button>
+        <h2>Замовити дзвінок</h2>
+        <p>Запишіться <span>безкоштовно</span> та отримайте подарунок</p>
+        <form name="contacts-form" autocomplete="off" novalidate>
+          <div class="form-field">
+            <label class="form-label" for="user-full-name"
+              >Ваше ім'я та прізвище</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              id="user-full-name"
+              name="user-full-name"
+              placeholder="Ваше ім'я та прізвище"
+            />
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="user-phone"
+              >Ваш номер телефону</label
+            >
+            <input
+              class="form-input"
+              type="tel"
+              id="user-phone"
+              name="user-phone"
+              placeholder="Ваш номер телефону"
+            />
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="user-email"
+              >Ваша електронна пошта</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Ваша електронна пошта"
+            />
+          </div>
+
+          <button class="form-button button" type="submit">
+            Замовити дзвінок
+          </button>
+          <p class="form-privacy-policy">
+            Натискаючи на кнопку я погоджуюсь з
+            <a class="form-link" href="#"> політикою конфіденційності</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
