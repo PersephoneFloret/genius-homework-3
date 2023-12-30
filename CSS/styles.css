@@ -144,7 +144,7 @@ address {
 
 /*Hero Titel Styles*/
 .hero-title {
-  font-family: "Play";
+  font-family: "Play" sans-serif;
   color: var(--color-brand-light);
   font-size: 140px;
   font-weight: 700;
@@ -206,7 +206,6 @@ address {
 .transformation-section-text {
   width: 709px;
 }
-
 .transformation-container {
   display: flex;
 }
@@ -271,10 +270,10 @@ address {
   padding-bottom: 96px;
 }
 .advantages-title {
-  width: 432px;
   text-align: center;
   margin: 0 auto;
   line-height: normal;
+  font-family: "Play", sans-serif;
 }
 .border-card {
   border: 1px solid white;
@@ -310,7 +309,6 @@ address {
   align-items: center;
 }
 .procedure-title {
-  width: 510px;
   text-align: center;
   margin: 0 auto;
 }
@@ -421,7 +419,7 @@ address {
   padding-bottom: 94px;
 }
 .contact-title {
-  width: 432px;
+  text-align: center;
   margin: 0 auto;
 }
 .section-title-bz {
@@ -429,7 +427,7 @@ address {
   width: 529px;
 }
 .section-title {
-  font-family: "Play";
+  font-family: "Play", sans-serif;
   font-size: 64px;
   font-weight: 700;
   margin-bottom: 48px;
