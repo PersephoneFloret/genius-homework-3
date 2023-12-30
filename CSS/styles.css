@@ -272,12 +272,9 @@ address {
 }
 .advantages-title {
   width: 432px;
-  height: 148;
   text-align: center;
   margin: 0 auto;
   line-height: normal;
-}
-.advantages-list {
 }
 .border-card {
   border: 1px solid white;
@@ -360,7 +357,6 @@ address {
   background-color: var(--color-brand-light);
   fill: var(--color-primary-light);
   border-color: var(--color-brand-light);
-  padding: o;
 }
 .carousel-button.next {
   transform: rotate(0.5turn);
