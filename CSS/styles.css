@@ -93,6 +93,7 @@ address {
   padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 99px;
+  padding-right: 102px;
   height: 106px;
 }
 .header-container {
@@ -167,11 +168,14 @@ address {
   background-color: transparent;
 }
 .button-description {
+  font-weight: 400;
+  font-family: "Roboto";
   color: #4a4a4a;
   font-size: 12px;
   line-height: 1.5;
   width: 238px;
   height: 38px;
+  text-align: center;
 }
 /*Sections Styles*/
 .hero-section {
@@ -187,7 +191,7 @@ address {
     ),
     url("../images/hero-pic.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   margin-top: -106px;
 }
@@ -196,8 +200,10 @@ address {
   padding-bottom: 176px;
   padding-left: 100px;
 }
+.section-title-bz {
+  line-height: normal;
+}
 .transformation-section-text {
-  margin-bottom: 40px;
   width: 709px;
 }
 
@@ -213,11 +219,54 @@ address {
   display: flex;
 }
 .image-before-container {
-  padding-left: 29px;
+  position: relative;
 }
 .img-after-container {
   padding-left: 196px;
 }
+.stars-1 {
+  position: absolute;
+  bottom: -40px;
+  left: 121px;
+}
+.stars-2 {
+  position: absolute;
+  top: 33px;
+  right: 0;
+}
+.star-3 {
+  position: absolute;
+  top: 270px;
+  right: 36px;
+}
+.stars-1.star-animation {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.stars-2.star-animation {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.star-3.star-animation {
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Advantages section*/
 .advantages-section {
   padding-bottom: 96px;
 }
@@ -226,6 +275,7 @@ address {
   height: 148;
   text-align: center;
   margin: 0 auto;
+  line-height: normal;
 }
 .advantages-list {
 }
@@ -327,12 +377,49 @@ address {
   border: none;
   border-radius: 32px;
 }
+.contact-form-container {
+  max-width: 100%;
+  width: 423px;
+  height: 481px;
+  max-height: 100%;
+  border-radius: 32px;
+  background-color: var(--color-brand-dark);
+}
 .contact-form {
   /*reemove‚ border after true modal window */
   width: 423px;
   height: 481px;
   border: 1px solid var(--color-brand-dark);
   border-radius: 32px;
+}
+.contact-form-title {
+  font-family: "Roboto";
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-primary-light);
+  padding-top: 48px;
+  padding-left: 74px;
+}
+.contact-form-title .accent {
+  color: var(--color-brand-light);
+}
+.contact-form-input {
+  padding-left: 57px;
+  width: 100%;
+  height: 52px;
+  max-width: 310px;
+  border: 2px solid var(--color-borderform-copyright);
+  border-radius: 32px;
+  background-color: transparent;
+  margin-left: 56px;
+  margin-right: 57px;
+}
+.contact-form-input:focus {
+  background-color: var(--color-brand-light);
+  color: var(--color-brand-dark);
+}
+.contacts-form-field {
+  margin-bottom: 16px;
 }
 .contact-section {
   padding-bottom: 94px;
@@ -354,12 +441,7 @@ address {
 .section-title .accent {
   color: var(--color-brand-light);
 }
-.call-request {
-  font-weight: 600px;
-}
-.call-request .accent {
-  color: var(--color-brand-light);
-}
+
 /*Footer styles*/
 .footer-section {
   background-color: var(--color-brand-dark);
@@ -456,7 +538,6 @@ address {
   border-radius: 48px;
   color: #fff;
   padding: 42px 144px;
-  overflow-y: auto;
 }
 .modal-btn-close {
   position: absolute;
@@ -464,12 +545,29 @@ address {
   right: 42px;
 }
 /*Form*/
+.form-title {
+  font-size: 54px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+.form-text {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+.form-text .accent {
+  color: var(--color-brand-light);
+}
+
 .form-field {
   margin-bottom: 24px;
 }
 .form-label {
-  display: block;
-  visibility: hidden;
+  display: none;
+  overflow: hidden;
 }
 .form-input {
   padding: 18px 33px;

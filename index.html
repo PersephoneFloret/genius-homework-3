@@ -35,7 +35,7 @@
             <ul class="list icons-list">
               <li>
                 <!--Посилання на лого  телефону-->
-                <a href="#" class="social-icons">
+                <a href="tel:+380960000007" class="social-icons">
                   <svg class="phone-icon" width="32" height="32">
                     <use href="./images/svg-icons.svg#icon-phone_logo"></use>
                   </svg>
@@ -66,7 +66,7 @@
     <main>
       <!--Hero Seection-->
       <section class="hero-section">
-        <div class="container hero-container">
+        <div class="container">
           <p class="cosmetology-clinic">Косметологічна клініка</p>
           <h1 class="hero-title" lang="eng">Beaty Zone</h1>
           <button class="button modal-btn-open" type="button">
@@ -107,6 +107,15 @@
                   src="./images/black-arrow.jpg"
                   alt="Обличчя з чорною стрілкою"
                 />
+                <svg class="stars-1 star-animation" width="64" height="64">
+                  <use href="./images/svg-icons.svg#icon-Star-1"></use>
+                </svg>
+                <svg class="stars-2 star-animation" width="40px" height="40px">
+                  <use href="./images/svg-icons.svg#icon-Star-2"></use>
+                </svg>
+                <svg class="star-3 star-animation" width="16" height="16">
+                  <use href="./images/svg-icons.svg#icon-Star-3-1"></use>
+                </svg>
               </div>
               <div class="img-after-container">
                 <img
@@ -212,11 +221,60 @@
             Як нас <span class="accent">знайти</span>
           </h2>
           <div class="contacts-container">
-            <div class="contact-form">
-              <p class="call-request">
-                Запишіться <span class="accent">безкоштовно</span> та отримайте
-                подарунок
+            <div class="contact-form-container">
+              <p class="contact-form-title">
+                Запишіться <span class="accent">безкоштовно</span> <br />та
+                отримайте подарунок
               </p>
+              <form name="contacts-form" autocomplete="off">
+                <div class="contacts-form-field">
+                  <label class="form-label" for="user-full-name"
+                    >Ваше ім'я та прізвище</label
+                  >
+                  <input
+                    class="contact-form-input"
+                    type="text"
+                    id="user-full-name"
+                    name="user-full-name"
+                    placeholder="Ваше ім'я та прізвище"
+                    required
+                  />
+                </div>
+                <div class="contacts-form-field">
+                  <label class="form-label" for="user-phone"
+                    >Ваш номер телефону</label
+                  >
+                  <input
+                    class="contact-form-input"
+                    type="tel"
+                    id="user-phone"
+                    name="user-phone"
+                    placeholder="Ваш номер телефону"
+                    required
+                  />
+                </div>
+                <div class="contacts-form-field">
+                  <label class="form-label" for="user-email"
+                    >Ваша електронна пошта</label
+                  >
+                  <input
+                    class="contact-form-input"
+                    type="email"
+                    id="user-email"
+                    name="user-email"
+                    placeholder="Ваша електронна пошта"
+                    required
+                  />
+                </div>
+
+                <button class="form-button button" type="submit">
+                  Замовити дзвінок
+                </button>
+                <p class="form-privacy-policy">
+                  Натискаючи на кнопку я погоджуюсь з
+                  <a class="form-link" href="#"> політикою конфіденційності</a>
+                </p>
+              </form>
             </div>
             <iframe
               class="contact-map"
@@ -282,7 +340,7 @@
           </ul>
           <ul class="list footer-icon-list">
             <li>
-              <a href="#">
+              <a href="tel:+380960000007">
                 <svg class="footer-icons" width="42px" height="42px">
                   <use
                     href="./images/svg-icons.svg#icon-telefon-icon-footer"
@@ -319,9 +377,12 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
-        <h2>Замовити дзвінок</h2>
-        <p>Запишіться <span>безкоштовно</span> та отримайте подарунок</p>
-        <form name="contacts-form" autocomplete="off" novalidate>
+        <h2 class="form-title">Замовити дзвінок</h2>
+        <p class="form-text">
+          Запишіться <span class="accent">безкоштовно</span> <br />
+          та отримайте подарунок
+        </p>
+        <form name="modal-form" autocomplete="off">
           <div class="form-field">
             <label class="form-label" for="user-full-name"
               >Ваше ім'я та прізвище</label
@@ -332,6 +393,7 @@
               id="user-full-name"
               name="user-full-name"
               placeholder="Ваше ім'я та прізвище"
+              required
             />
           </div>
           <div class="form-field">
@@ -344,6 +406,7 @@
               id="user-phone"
               name="user-phone"
               placeholder="Ваш номер телефону"
+              required
             />
           </div>
           <div class="form-field">
@@ -356,9 +419,9 @@
               id="user-email"
               name="user-email"
               placeholder="Ваша електронна пошта"
+              required
             />
           </div>
-
           <button class="form-button button" type="submit">
             Замовити дзвінок
           </button>
